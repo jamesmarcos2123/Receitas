@@ -18,6 +18,6 @@ console.log("Conectando ao Banco de");
 bd.conecta(() => { 
     console.log('Conectado. Iniciando o servidor web...');
     app.listen(process.env.PORT || 3000, () => {
-      console.log(`Servidor no ar em: http://localhost:${SERVER_PORT}`);
+      console.log(`Servidor no ar em: http://localhost:${process.env.PORT}`);
     });
   });
