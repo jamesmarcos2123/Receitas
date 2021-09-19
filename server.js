@@ -12,13 +12,12 @@ app.use(express.urlencoded());
 
 app.use('/receitas', require('./controller/receitas_controller'))
 
-const SERVER_PORT = parseInt(process.env.SERVER_PORT);
 
 
 console.log("Conectando ao Banco de");
 bd.conecta(() => { 
     console.log('Conectado. Iniciando o servidor web...');
-    app.listen(SERVER_PORT || 3000, () => {
+    app.listen(process.env.PORT || 3000, () => {
       console.log(`Servidor no ar em: http://localhost:${SERVER_PORT}`);
     });
   });
