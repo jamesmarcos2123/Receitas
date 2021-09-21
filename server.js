@@ -11,6 +11,8 @@ app.use(express.json())
 app.use(express.urlencoded());
 
 app.use('/api/receitas', require('./controller/receitas_controller'))
+app.use('/api/videos', require('./controller/videos_controller'))
+
 
 
 
